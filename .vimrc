@@ -10,8 +10,10 @@ set directory^=~/.vim/swap//
 set number
 set ruler
 set laststatus=2
+
 " allow to hide unsaved buffers
 set hidden
+
 " enable mouse (for terminals that support it)
 set mouse=a
 
@@ -68,6 +70,7 @@ imap <f7> <esc><f7>
 " use system registry by default
 set clipboard=unnamed
 
+" use pathogen
 call pathogen#runtime_append_all_bundles()
 
 syntax on
@@ -122,3 +125,7 @@ set list
 set listchars=tab:→\ ,trail:·
 
 autocmd FileType go set nolist
+
+" map ,n key sequence to toggle NERDTree
+
+:map ,n :NERDTreeToggle<CR>
